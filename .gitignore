@@ -1,14 +1,41 @@
-pom.xml
-pom.xml.asc
-*.jar
-*.class
-/lib/
-/classes/
-/target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-.nrepl-port
-.cpcache/
+# Clojure/ClojureScript build artifacts
+/target
+/classes
+/checkouts
+
+# Shadow-cljs artifacts
+/node_modules
+/.shadow-cljs/
+/public/js
+/public/cljs-runtime
+/out
+
+# Clojure dependency management
+/.cpcache
+/.lein-*
+/.nrepl-port
+.hgignore
+.hg/
+
+# IDE files
+/.idea
+/*.iml
+/.clj-kondo/.cache
+/.lsp
+/.calva
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+
+# Local environment files
+.env
+.env.local

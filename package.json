@@ -1,0 +1,17 @@
+{
+  "name": "cljs-sandbox",
+  "module": "index.ts",
+  "scripts": {
+    "start": "npx shadow-cljs watch app",
+    "format": "cljfmt fix",
+    "test": "npx shadow-cljs compile test",
+    "test:watch": "npx shadow-cljs watch test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "shadow-cljs": "^2.28.20"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

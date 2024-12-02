@@ -1,0 +1,17 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}
+        thheller/shadow-cljs {:mvn/version "2.25.2"}}
+ :aliases
+ {:dev {:extra-paths ["dev"]}}}
+
+; shadow-cljs.edn
+{:source-paths ["src"]
+ :dependencies []
+ :dev-http {8080 "public"}
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [app.core]}}
+        :devtools {:after-load app.core/mount}}}}
